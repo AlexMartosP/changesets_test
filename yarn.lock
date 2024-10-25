@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@alexmartosp/calcer@^4.0.0":
+  version "4.0.0"
+  resolved "https://npm.pkg.github.com/download/@alexmartosp/calcer/4.0.0/ebdd012cb888ccc7491853247636c777f232ce60#ebdd012cb888ccc7491853247636c777f232ce60"
+  integrity sha512-scHyqTkvIhSLaztbjeNgprbmD96M9xVJ7fXbVbgP2Wk9eHRkKfm3HV3/feehQF0yywmhx+jfhhQjbd2cvKIlmw==
+
 "@babel/runtime@^7.5.5":
   version "7.25.9"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.25.9.tgz#65884fd6dc255a775402cc1d9811082918f4bf00"
