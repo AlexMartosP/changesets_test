@@ -39,24 +39,24 @@ jobs:
           CHANGESETS_LENGTH=$(jq '.changesets | length' < status.json)
           HAS_CHANGES=$([ "$CHANGESETS_LENGTH" -gt 0 ] && echo true || echo false)
 
-          echo $CHANGESETS_LENGTH
-          echo $HAS_CHANGES
-
           [ $HAS_CHANGES = true ] && echo "Has changes" || echo "No changes found"
-          echo "has-changes=$HAS_CHANGES" >> $GITHUB_OUTPUT
+          echo "hasChanges=$HAS_CHANGES" >> $GITHUB_OUTPUT
 
           rm status.json
 
+      - name: Test output
+        run: echo ${{steps.changeset-status.outputs.hasChanges}}
+
       - name: Version packages
-        if: steps.changeset-status.outputs.has-changes
+        if: ${{ false}}
         run: yarn release:version
 
       - name: Publish packages
-        if: steps.changeset-status.outputs.has-changes
+        if: ${{ false}}
         run: yarn release:publish
 
       - name: Push changes to Repo
-        if: steps.changeset-status.outputs.has-changes
+        if: ${{ false}}
         run: |
           git config user.name = release-bot
           git config email.email = relase@bot.com
