@@ -6,6 +6,11 @@
   "repository": "git@gh_alexmartosp:AlexMartosP/changesets_test.git",
   "author": "Alexander Martos Paschoal <alexander.martos@minut.com>",
   "license": "MIT",
+  "scripts": {
+    "changeset": "changeset",
+    "release:version": "changeset version",
+    "release:publish": "changeset publish"
+  },
   "workspaces": [
     "./packages/calcer",
     "./packages/logger"
