@@ -1,5 +1,11 @@
 # @alexmartosp/calcer
 
+## 6.0.0
+
+### Major Changes
+
+- 64a0297: Remove multi
+
 ## 4.0.0
 
 ### Major Changes
