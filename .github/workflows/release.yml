@@ -59,4 +59,5 @@ jobs:
           git config user.name = release-bot
           git config email.email = relase@bot.com
 
+          git commit -am "Version packages"
           git push origin main
