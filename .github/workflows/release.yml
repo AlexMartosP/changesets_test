@@ -45,15 +45,15 @@ jobs:
           rm status.json
 
       - name: Version packages
-        if: ${{ steps.changeset-status.outputs.hasChanges == true }}
+        if: ${{ steps.changeset-status.outputs.hasChanges == 'true' }}
         run: yarn release:version
 
       - name: Publish packages
-        if: ${{ steps.changeset-status.outputs.hasChanges == true }}
+        if: ${{ steps.changeset-status.outputs.hasChanges == 'true' }}
         run: yarn release:publish
 
       - name: Push changes to Repo
-        if: ${{ steps.changeset-status.outputs.hasChanges == true }}
+        if: ${{ steps.changeset-status.outputs.hasChanges == 'true' }}
         run: |
           git config user.name = release-bot
           git config email.email = relase@bot.com
