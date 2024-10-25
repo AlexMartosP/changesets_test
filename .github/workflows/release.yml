@@ -45,7 +45,7 @@ jobs:
           rm status.json
 
       - name: Test output
-        if: steps.changeset-status.outputs.hasChanges
+        if: ${{ steps.changeset-status.outputs.hasChanges == true }}
         run: echo "Should not be echoed"
 
       - name: Version packages
