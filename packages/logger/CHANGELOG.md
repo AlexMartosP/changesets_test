@@ -1,5 +1,13 @@
 # @alexmartosp/logger
 
+## 1.0.3
+
+### Patch Changes
+
+- 47329d8: Remove multi
+- Updated dependencies [47329d8]
+  - @alexmartosp/calcer@4.0.0
+
 ## 1.0.2
 
 ### Patch Changes
