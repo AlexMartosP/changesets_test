@@ -56,8 +56,5 @@ jobs:
       - name: Push changes to Repo
         if: ${{ steps.changeset-status.outputs.hasChanges == 'true' }}
         run: |
-          git config user.name = release-bot
-          git config email.email = relase@bot.com
-
           git commit -am "Version packages"
           git push origin main
