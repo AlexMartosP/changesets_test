@@ -1,5 +1,11 @@
 # @alexmartosp/logger
 
+## 1.2.0
+
+### Minor Changes
+
+- ac7470b: Remove a log
+
 ## 1.0.3
 
 ### Patch Changes
