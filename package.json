@@ -1,0 +1,16 @@
+{
+  "name": "changesets",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@gh_alexmartosp:AlexMartosP/changesets_test.git",
+  "author": "Alexander Martos Paschoal <alexander.martos@minut.com>",
+  "license": "MIT",
+  "workspaces": [
+    "./packages/calcer",
+    "./packages/logger"
+  ],
+  "dependencies": {
+    "@changesets/cli": "^2.27.9"
+  }
+}
