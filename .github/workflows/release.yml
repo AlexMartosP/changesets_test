@@ -6,7 +6,8 @@ on:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
-permissions: write-all
+permissions:
+  packages: write
 
 env:
   NPM_TOKEN: ${{secrets.GITHUB_TOKEN}}
