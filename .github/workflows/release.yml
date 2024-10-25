@@ -44,20 +44,16 @@ jobs:
 
           rm status.json
 
-      - name: Test output
-        if: ${{ steps.changeset-status.outputs.hasChanges == true }}
-        run: echo "Should not be echoed"
-
       - name: Version packages
-        if: ${{ false}}
+        if: ${{ steps.changeset-status.outputs.hasChanges == true }}
         run: yarn release:version
 
       - name: Publish packages
-        if: ${{ false}}
+        if: ${{ steps.changeset-status.outputs.hasChanges == true }}
         run: yarn release:publish
 
       - name: Push changes to Repo
-        if: ${{ false}}
+        if: ${{ steps.changeset-status.outputs.hasChanges == true }}
         run: |
           git config user.name = release-bot
           git config email.email = relase@bot.com
