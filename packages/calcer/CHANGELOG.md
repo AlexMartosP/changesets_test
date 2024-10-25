@@ -1,5 +1,11 @@
 # @alexmartosp/calcer
 
+## 3.0.0
+
+### Major Changes
+
+- a5046e8: Add multi
+
 ## 2.0.0
 
 ### Major Changes

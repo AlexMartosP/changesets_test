@@ -1,5 +1,12 @@
 # @alexmartosp/logger
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies [a5046e8]
+  - @alexmartosp/calcer@3.0.0
+
 ## 1.0.1
 
 ### Patch Changes
