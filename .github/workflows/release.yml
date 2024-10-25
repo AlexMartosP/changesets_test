@@ -30,10 +30,15 @@ jobs:
       - name: Get changesets status
         id: changeset-status
         run: |
-          yarn changeset status --output status.json
-          CHANGESETS_LENGTH=$(cat status.json | jq '.changesets | length')
+          yarn changeset status --output status.json 2>/dev/null
+          CHANGESETS_LENGTH=$(jq '.changesets | length' < status.json)
+          HAS_CHANGES=$([ "$CHANGESETS_LENGTH" -gt 0 ] && echo true || echo false)
 
-          echo "has-changes=$([ "$CHANGESETS_LENGTH" -gt 0 ] && echo "true" || echo "false")" >> $GITHUB_OUTPUT
+          echo $CHANGESETS_LENGTH
+          echo $HAS_CHANGES
+
+          [ $HAS_CHANGES = true ] && echo "Has changes" || echo "No changes found"
+          echo "has-changes=$HAS_CHANGES" >> $GITHUB_OUTPUT
 
           rm status.json
 
