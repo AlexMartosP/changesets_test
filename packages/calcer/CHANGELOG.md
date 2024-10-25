@@ -1,5 +1,11 @@
 # @alexmartosp/calcer
 
+## 2.0.0
+
+### Major Changes
+
+- f4c9cd3: Add divide 2
+
 ## 1.1.0
 
 ### Minor Changes
